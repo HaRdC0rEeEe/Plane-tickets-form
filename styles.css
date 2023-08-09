@@ -1,0 +1,64 @@
+* {
+
+    padding: 0;
+    font-family: Consolas;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    font-family: inherit;
+
+}
+
+input[type="radio"] {
+    margin: 5px;
+
+}
+
+
+.container>label {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex: 1;
+
+}
+
+.container {
+    outline: 1px solid;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select {
+    margin: 15px 0;
+
+}
+
+label {
+    display: inline-block;
+
+}
+
+input[type="button"] {
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid;
+}
+
+#resultId {
+    font-size: 1.5rem;
+    color: cadetblue;
+}

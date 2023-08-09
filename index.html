@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript cvičení</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>Letenky</legend>
+
+        <form onchange="updatePrice()">
+
+            <label for="citySelection">Odlet do: </label>
+            <select name="citySelection" id="citySelection" onchange="setSelect()">
+                <option value="0">Praha</option>
+                <option value="1">Frankfurt</option>
+                <option value="2">New York</option>
+                <option value="3">Sydney</option>
+            </select>
+
+
+            <label for="ticketSelection">Počet letenek: </label>
+            <select name="ticketSelection" id="ticketSelection">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+            </select>
+
+
+
+            <br>
+            <label for="returnTicket">Zpáteční letenka:</label>
+            <input type="checkbox" name="returnTicket" id="returnTicket">
+            <br>
+
+            <div class="container">
+                <label for="radioEconomy">Economy class – bez přirážky:
+                    <input type="radio" name="businessClass" id="radioEconomy" checked
+                        onchange="setPercentageIncrease()">
+                </label>
+
+                <label for="radioBusiness">Business class - + 25 procent k ceně:
+                    <input type="radio" name="businessClass" id="radioBusiness" onchange="setPercentageIncrease()">
+                </label>
+
+                <label for="radioRoyal">Royal class - + 50 procent k ceně:
+                    <input type="radio" name="businessClass" id="radioRoyal" onchange="setPercentageIncrease()">
+                </label>
+            </div>
+            <hr>
+            <p>Total value of your order: <span id="resultId"></span></p>
+
+            <label for="budgetInput">My budget: </label>
+            <input type="number" name="budgetInput" id="budgetInput" required>
+
+            <input type="button" value="Submit budget" id="submitBudgetButton" onclick="submitBudget()">
+
+            <br>
+            <label for="noteId">Note:</label>
+            <br>
+            <textarea name="note" id="noteId" cols="40" rows="10" placeholder="Do you have any questions?"
+                oninput="validateNoteInput()"></textarea>
+
+        </form>
+    </fieldset>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
